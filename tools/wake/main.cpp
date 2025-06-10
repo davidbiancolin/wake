@@ -389,7 +389,7 @@ int main(int argc, char **argv) {
     percent = strtod(clo.percent_str, &tail);
     percent /= 100.0;
     if (*tail || percent < 0.01 || percent > 0.99) {
-      std::cerr << "Cannot run with " << clo.percent_str << "%  (must be >= 0.01 and <= 0.99)!"
+      std::cerr << "Cannot run with " << clo.percent_str << "%  (must be >= 1% and <= 99%)!"
                 << std::endl;
       return 1;
     }
